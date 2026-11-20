@@ -1,0 +1,26 @@
+# Switch Configuration: step-I:click on switch
+step-2: go to CLI
+
+conf t
+hostname sl
+interface vlanl
+xp address 10.ø.ø.1 255.ø.ø.ø
+no shut
+exit
+exit
+exit
+
+
+
+
+# OSPF TEXT:
+
+enable
+configure terminal
+router ospf 1
+network 192.168.10.0 255.255.255.0 area 0
+network 192.168.20.0 255.255.255.0 area 0
+network 192.168.30.0 255.255.255.0 area 0
+network 10.0.0.0 255.0.0.0 area 0
+network 20.0.0.0 255.0.0.0 area 0
+exit
