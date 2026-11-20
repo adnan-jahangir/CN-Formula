@@ -1,12 +1,11 @@
 # Switch Configuration: step-I:click on switch
 step-2: go to CLI
-
-conf t
-hostname sl
-interface vlanl
-xp address 10.ø.ø.1 255.ø.ø.ø
-no shut
-exit
+enable
+configure terminal
+hostname S1
+interface vlan 1
+ip address 10.0.0.1 255.0.0.0
+no shutdown
 exit
 exit
 
