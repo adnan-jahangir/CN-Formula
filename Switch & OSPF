@@ -23,3 +23,32 @@ network 192.168.30.0 255.255.255.0 area 0
 network 10.0.0.0 255.0.0.0 area 0
 network 20.0.0.0 255.0.0.0 area 0
 exit
+
+
+
+## For VLAN CLI
+
+enable
+configure terminal
+
+vlan 10
+name STUDENT
+exit
+
+vlan 20
+name TEACHER
+exit
+
+interface range fa0/1-5
+switchport mode access
+switchport access vlan 10
+exit
+
+interface range fa0/6-10
+switchport mode access
+switchport access vlan 20
+exit
+
+end
+
+show vlan brief
